@@ -19,8 +19,10 @@ export function validateTranslations(value:unknown,input:TextItem[]):Translated[
   const a=row as Record<string,unknown>;
   if(typeof a.id!=='string'||!expected.has(a.id)||seen.has(a.id)||typeof a.title!=='string'||!a.title.trim()||a.title.length>1200||typeof a.excerpt!=='string'||a.excerpt.length>4000)throw new TranslationError('unavailable');
   if(expected.get(a.id)!.excerpt&&!a.excerpt.trim())throw new TranslationError('unavailable');
-  if(/[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af\u3400-\u9fff]/u.test(a.title+a.excerpt))throw new TranslationError('unavailable');
   seen.add(a.id);return {id:a.id,title:a.title.trim(),excerpt:expected.get(a.id)!.excerpt?a.excerpt.trim():''};
+ }).filter(a=>{
+  const untranslated=(text:string)=>{const sourceLetters=(text.match(/[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af\u3400-\u9fff]/gu)||[]).length;const latinLetters=(text.match(/[A-Za-zÀ-ÿ]/gu)||[]).length;return sourceLetters>0&&sourceLetters>latinLetters/3;};
+  return !untranslated(a.title)&&!untranslated(a.excerpt);
  });
 }
 
@@ -44,7 +46,7 @@ const translateBatch=unstable_cache(async(input:TextItem[],model:string):Promise
  const text=candidate?.content?.parts?.filter((p:{text?:unknown;thought?:boolean})=>typeof p.text==='string'&&!p.thought).map((p:{text:string})=>p.text).join('');
  let parsed:unknown;try{parsed=JSON.parse(text);}catch{throw new TranslationError('unavailable');}
  return validateTranslations(parsed,input);
-},['bts-gemini-translations-v2'],{revalidate:7*86400});
+},['bts-gemini-translations-v3'],{revalidate:7*86400});
 
 export async function translateArticles(input:Article[],deadline=Date.now()+160000):Promise<{items:Article[];translation:TranslationReport}>{
  const candidates=input.filter(a=>a.language!=='pt-BR'),total=candidates.length;
@@ -60,16 +62,19 @@ export async function translateArticles(input:Article[],deadline=Date.now()+1600
  }
  // Stable ordering makes unchanged batches reusable in the persistent Next.js Data Cache.
  missing.sort((a,b)=>a.id.localeCompare(b.id));
- const batches:TextItem[][]=[];for(let i=0;i<missing.length;i+=10)batches.push(missing.slice(i,i+10));
+ const batches:{items:TextItem[];attempt:number}[]=[];for(let i=0;i<missing.length;i+=10)batches.push({items:missing.slice(i,i+10),attempt:0});
  let next=0,quota=false,failed=false;
  await Promise.all(Array.from({length:2},async()=>{
   while(next<batches.length){
    if(quota||Date.now()+45500>deadline){failed=true;break;}
-   const batch=batches[next++];
+   const job=batches[next++],batch=job.items;
    try{
     const output=await translateBatch(batch,model);
     for(const value of output){translated.set(value.id,value);const source=batch.find(a=>a.id===value.id)!;memory.set(fingerprint(source),{at:Date.now(),value});}
-   }catch(e){failed=true;if(e instanceof TranslationError&&e.reason==='quota')quota=true;}
+    const remaining=batch.filter(a=>!translated.has(a.id));
+    if(remaining.length&&job.attempt===0)batches.push({items:remaining,attempt:1});
+    else if(remaining.length)failed=true;
+   }catch(e){failed=true;if(e instanceof TranslationError&&e.reason==='quota')quota=true;else if(job.attempt===0)batches.push({items:batch,attempt:1});}
   }
  }));
  while(memory.size>1000)memory.delete(memory.keys().next().value!);
