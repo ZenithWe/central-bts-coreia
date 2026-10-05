@@ -49,7 +49,7 @@ export async function translateArticles(input:Article[],deadline=Date.now()+4000
  const candidates=input.filter(a=>a.language!=='pt-BR'),total=candidates.length;
  if(!total)return {items:input,translation:{status:'complete',translated:0,total:0,message:'As publicações já estão em português.'}};
  if(!process.env.GEMINI_API_KEY)return {items:input,translation:{status:'not_configured',translated:0,total,message:'Tradução automática ainda não ativada. Exibindo os textos originais.'}};
- const model=process.env.GEMINI_MODEL||'gemini-2.5-flash-lite';
+ const model=process.env.GEMINI_MODEL||'gemini-3.5-flash-lite';
  const translated=new Map<string,Translated>();
  const missing:TextItem[]=[];
  for(const a of candidates){

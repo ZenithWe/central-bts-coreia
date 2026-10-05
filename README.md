@@ -53,7 +53,7 @@ A seleção inicial inclui posts antigos, encontrados em 5/10/2026, que não apa
 
 ## Tradução Gemini
 
-Configure GEMINI_API_KEY como variável sensível de Production na Vercel e publique novamente. Use uma chave de projeto Google AI Studio no Free Tier, com faturamento desativado; não ativar billing. GEMINI_MODEL é opcional e usa gemini-2.5-flash-lite por padrão. A chave nunca usa prefixo NEXT_PUBLIC e nunca é enviada ao navegador nem commitada. O site envia somente títulos/trechos públicos de suas próprias fontes, não textos arbitrários do visitante. No Free Tier, o provedor pode usar conteúdo para melhorar seus produtos.
+Configure GEMINI_API_KEY como variável sensível de Production na Vercel e publique novamente. Use uma chave de projeto Google AI Studio no Free Tier, com faturamento desativado; não ativar billing. GEMINI_MODEL é opcional e usa gemini-3.5-flash-lite por padrão. A chave nunca usa prefixo NEXT_PUBLIC e nunca é enviada ao navegador nem commitada. O site envia somente títulos/trechos públicos de suas próprias fontes, não textos arbitrários do visitante. No Free Tier, o provedor pode usar conteúdo para melhorar seus produtos.
 
 A tradução preserva URLs, fontes, datas e classificação. Português é o padrão, com controle Mostrar textos originais e identificação de tradução automática. Posts curatoriais já em português não são traduzidos novamente. Falhas, ausência de chave ou cota encerrada mantêm o conteúdo original com aviso. Não há fallback para modelo pago. Um projeto Gemini com billing ativo pode gerar cobranças: o aplicativo não consegue determinar sozinho a modalidade de faturamento da chave.
 
