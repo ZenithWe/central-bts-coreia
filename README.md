@@ -40,3 +40,13 @@ A implantação é direta pela API da Vercel; o vínculo GitHub → Vercel ainda
 ## Validação
 
 Em 5 de outubro de 2026, a primeira versão na Vercel retornou 48 matérias nas nove consultas do Daum. A expansão foi validada com HTML público real do Naver (10 resultados), TheQoo (20) e Pann (17), além da preservação de origens na deduplicação, TypeScript e build de produção. A validação local não garante a disponibilidade contínua das fontes externas.
+
+## X e Weibo: pesquisa agendada
+
+`data/social-posts.json` contém posts públicos localizados por pesquisa, com resumos autorais em português, autor, plataforma, data de publicação quando confirmada, data de descoberta e nota de evidência. O feed combina esses dados com as quatro fontes já consultadas. Não há cadastro manual pelo usuário nem API paga.
+
+A pesquisa recorrente é executada por uma tarefa do ChatGPT, fora da Vercel. A tarefa atualiza o JSON no GitHub e publica uma nova implantação pela conexão Vercel; o site sozinho não pesquisa X/Weibo. O horário `checkedAt` mostra a última pesquisa concluída. Se a tarefa falhar, a seleção anterior permanece. O botão de notícias apenas lê a seleção publicada. Não há promessa de tempo real, cobertura completa ou gratuidade ilimitada fora das cotas existentes.
+
+Preservar datas originais, não confundir data de indexação com publicação, não inventar postagens/resumos. `publishedDate` aceita YYYY-MM-DD ou null (sem data confirmada). Posts sem data confirmada aparecem apenas em Todos os resultados. Para adicionar, usar URL direta HTTPS x.com/usuario/status/id ou weibo.com/usuario/id ou weibo.com/2/detail/id; `accountType` Oficial somente com evidência, senão Comunidade. Não coletar dados privados nem contornar bloqueios. Deduplicar por URL.
+
+A seleção inicial inclui posts antigos, encontrados em 5/10/2026, que não aparecem no filtro inicial de sete dias. Use X ou Weibo e “Incluir posts antigos nos resultados”.

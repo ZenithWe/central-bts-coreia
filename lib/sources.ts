@@ -1,12 +1,12 @@
 import { clean, makeArticle, parseTime, type Article, type Platform } from './daum';
-export type SourceStatus = { platform:Platform; name:string; status:'ok'|'partial'|'unavailable'|'external'; count:number; detail:string; url:string };
+export type SourceStatus = { platform:Platform; name:string; status:'ok'|'partial'|'unavailable'|'external'|'curated'; count:number; detail:string; url:string };
 export const sourceCatalog:SourceStatus[] = [
  {platform:'Daum',name:'Daum',status:'ok',count:0,detail:'9 buscas sobre o grupo e os integrantes.',url:'https://search.daum.net/search?w=news&q=BTS&sort=recency'},
  {platform:'Naver',name:'Naver',status:'ok',count:0,detail:'Notícias da busca pública do Naver.',url:'https://search.naver.com/search.naver?where=news&query=BTS&sort=1'},
  {platform:'Fóruns coreanos',name:'TheQoo',status:'ok',count:0,detail:'Tópicos públicos do fórum BTS. Conteúdo de comunidade.',url:'https://theqoo.net/bts'},
  {platform:'Fóruns coreanos',name:'Pann',status:'ok',count:0,detail:'FanTalk BTS; pode haver publicações antigas.',url:'https://pann.nate.com/fantalk/2354'},
- {platform:'Weibo',name:'Weibo',status:'external',count:0,detail:'Pesquisa externa. Coleta não conectada: o acesso público retornou uma tela de visitantes.',url:'https://s.weibo.com/weibo?q=BTS'},
- {platform:'X',name:'X',status:'external',count:0,detail:'Pesquisa externa. A coleta oficial exige acesso à API e créditos pagos.',url:'https://x.com/search?q=BTS%20OR%20%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8&src=typed_query&f=live'},
+ {platform:'Weibo',name:'Weibo',status:'curated',count:0,detail:'Links públicos localizados em pesquisas, com resumos em português. Cobertura parcial.',url:'https://s.weibo.com/weibo?q=BTS'},
+ {platform:'X',name:'X',status:'curated',count:0,detail:'Links públicos localizados em pesquisas, com resumos em português. Cobertura parcial.',url:'https://x.com/search?q=BTS%20OR%20%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8&src=typed_query&f=live'},
 ];
 export function parseNaver(html:string,now=Date.now()):Article[]{
  const result:Article[]=[];

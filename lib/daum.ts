@@ -1,7 +1,7 @@
 export const queries = ['BTS', '방탄소년단', '방탄소년단 RM', '방탄소년단 진', '방탄소년단 슈가', '방탄소년단 제이홉', '방탄소년단 지민', '방탄소년단 뷔', '방탄소년단 정국'];
 export type Platform = 'Daum' | 'Naver' | 'Fóruns coreanos' | 'Weibo' | 'X';
 export type Origin = { platform: Platform; source: string };
-export type Article = { platform: Platform; origins: Origin[]; kind: 'Notícia' | 'Comunidade'; id: string; title: string; excerpt: string; source: string; url: string; publishedAt: string | null; timeLabel: string; members: string[]; topic: string; direct: boolean };
+export type Article = { language?:string; curated?:boolean; foundAt?:string; accountType?:'Oficial'|'Comunidade'; platform: Platform; origins: Origin[]; kind: 'Notícia' | 'Comunidade'; id: string; title: string; excerpt: string; source: string; url: string; publishedAt: string | null; timeLabel: string; members: string[]; topic: string; direct: boolean };
 const members: Record<string, RegExp> = { RM: /\bRM\b|김남준|남준/i, Jin: /\bJin\b|김석진|방탄소년단\s*진|BTS\s*진/i, Suga: /슈가|민윤기|\bSuga\b|Agust D/i, 'J-Hope': /제이홉|정호석|j.?hope/i, Jimin: /지민|박지민|jimin/i, V: /방탄소년단\s*뷔|뷔|김태형|\bV\b/, Jungkook: /정국|전정국|jungkook/i };
 export function clean(s: string) { return s.replace(/<[^>]*>/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n,16))).replace(/&quot;/g,'"').replace(/&apos;|&#39;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim(); }
 export function parseTime(raw: string, now: number): string | null {

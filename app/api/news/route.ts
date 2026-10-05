@@ -1,5 +1,6 @@
 import { parseDaum, queries, type Article } from '@/lib/daum';
 import { mergeArticles, parseNaver, parseTheQoo, parsePann, sourceCatalog } from '@/lib/sources';
+import { socialArticles, socialCheckedAt } from '@/lib/social-feed';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 export const maxDuration=60;
@@ -29,7 +30,9 @@ async function collect(){
   if(failures.length)sources[i].detail=sources[i].count?'Algumas buscas não responderam. Resultados parciais.':'Não foi possível ler esta fonte agora. A pesquisa externa continua disponível.';
   sources[i].count=new Set(results.filter(a=>i<2?a.platform===sources[i].platform:a.source.startsWith(sources[i].name)).map(a=>a.url)).size;
  }
- const body={items:mergeArticles(results),checkedAt:new Date(started).toISOString(),queries:jobs.length-failed.length,totalQueries:jobs.length,failed,sources,translation:'external'};
+ const social=socialArticles();
+ for(const source of sources.filter(s=>s.status==='curated'))source.count=social.filter(p=>p.platform===source.platform).length;
+ const body={socialCheckedAt,items:mergeArticles([...results,...social]),checkedAt:new Date(started).toISOString(),queries:jobs.length-failed.length,totalQueries:jobs.length,failed,sources,translation:'external'};
  if(body.items.length)cache={at:Date.now(),body};return body;
 }
 export async function GET(){

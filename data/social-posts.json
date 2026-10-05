@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-05T21:52:55.680327+00:00",
+  "method": "Pesquisa pública com curadoria e resumos em português",
+  "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5346327122673918",
+      "author": "派对企划册",
+      "accountType": "Comunidade",
+      "title": "BTS: post reúne informações sobre a loja ARIRANG em Guangzhou",
+      "summary": "O perfil compartilhou um guia para a loja temporária em Guangzhou, com funcionamento anunciado de 27 de setembro a 18 de outubro de 2026. Confira as condições no aviso original.",
+      "publishedDate": "2026-09-23",
+      "evidence": "Resultado público da postagem: 9-23 15:06; anúncio informa o ano de 2026.",
+      "foundAt": "2026-10-05T21:52:55.680327+00:00"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5336104413692682",
+      "author": "WNS_WeNeedBTS",
+      "accountType": "Comunidade",
+      "title": "BTS: fã compartilha guia das transmissões dos shows em Los Angeles",
+      "summary": "O perfil reproduziu informações de um anúncio sobre as transmissões online da turnê ARIRANG em Los Angeles, previstas para 1, 2, 5 e 6 de setembro de 2026.",
+      "publishedDate": "2026-08-26",
+      "evidence": "Post indexado: 8-26 10:04; texto identifica 260826 e datas de setembro de 2026.",
+      "foundAt": "2026-10-05T21:52:55.680327+00:00"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/5571110778/5283038655155214",
+      "author": "BTS_official",
+      "accountType": "Oficial",
+      "title": "BTS compartilha vídeo com referências a ARIRANG e SWIM",
+      "summary": "O perfil oficial publicou um vídeo acompanhado de hashtags do álbum ARIRANG e da faixa SWIM.",
+      "publishedDate": "2026-04-01",
+      "evidence": "Post indexado com data 26-04-1 23:40 e autoria BTS_official.",
+      "foundAt": "2026-10-05T21:52:55.680327+00:00"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/BIGHIT_MUSIC/status/2036114666041315545",
+      "author": "@BIGHIT_MUSIC",
+      "accountType": "Oficial",
+      "title": "BIGHIT compartilha notícia sobre recordes de ARIRANG no Spotify",
+      "summary": "A gravadora compartilhou uma matéria sobre recordes do álbum ARIRANG no Spotify após o lançamento. O cartão resume a divulgação feita pelo perfil.",
+      "publishedDate": "2026-03-23",
+      "evidence": "Post indexado: 2026年3月23日; autoria BIGHIT MUSIC.",
+      "foundAt": "2026-10-05T21:52:55.680327+00:00"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2021932587661635731",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS anuncia sessões de shows de Goyang e Tóquio em cinemas",
+      "summary": "O perfil oficial divulgou a exibição de shows da turnê ARIRANG em cinemas e anunciou o início da venda de ingressos para 25 de fevereiro.",
+      "publishedDate": "2026-02-12",
+      "evidence": "Post indexado: 12 de fevereiro de 2026; autoria BTS_official, @bts_bighit.",
+      "foundAt": "2026-10-05T21:52:55.680327+00:00"
+    }
+  ]
+}
