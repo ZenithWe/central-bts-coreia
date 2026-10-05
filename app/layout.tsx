@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Central BTS Coreia · Rose Freitas",
-  description: "Notícias do BTS na imprensa coreana, com buscas no Daum e links para tradução.",
+  description: "Notícias e comunidades do BTS: Daum, Naver, TheQoo e Pann em um feed com origem identificada.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

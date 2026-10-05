@@ -1,49 +1,42 @@
 # Central BTS Coreia — Rose Freitas
 
-Aplicativo web em preto e dourado para reunir notícias do BTS no Daum.
+Feed em preto e dourado para reunir notícias e publicações de comunidades sobre BTS.
 
-## Recursos
+Produção: https://central-bts-coreia.vercel.app/
 
-- Botão para consultar nove buscas: BTS, 방탄소년단 e os sete integrantes.
-- Filtros por integrante, assunto e período; pesquisa nos resultados.
-- Deduplicação por URL e título, ordenação por publicação e horários aproximados de Brasília e Seul.
-- Comparação com a consulta anterior neste navegador usando armazenamento local.
-- Links para o original e para leitura no Google Tradutor. Os títulos e trechos do painel permanecem no idioma original; não há tradução ou resumo por IA dentro do painel.
-- Erros e consultas parciais indicados na interface. Não há notícias fictícias.
+## Fontes
 
-## Executar no computador
+- Daum: primeira página de nove buscas sobre o grupo e seus integrantes.
+- Naver: primeira página de duas buscas públicas, BTS e 방탄소년단.
+- TheQoo: tópicos públicos da primeira página do fórum BTS.
+- Pann: tópicos públicos do FanTalk BTS. O fórum pode retornar posts antigos, ocultados pelo filtro padrão de sete dias.
+- Weibo e X: atalhos externos, **sem coleta automática**. O Weibo retornou uma tela de visitantes no teste; a API oficial do X requer acesso e créditos pagos. Nenhum serviço pago foi ativado.
+
+Cada resultado informa plataforma, veículo/comunidade e tipo (Notícia ou Comunidade). Resultados jornalísticos repetidos são agrupados preservando as origens. Tópicos de fórum não são tratados como notícias confirmadas. Não há conteúdo fictício.
+
+O filtro de plataforma atua sobre todas as origens da matéria agrupada. Filtros adicionais: integrante, período, assunto, termo, palavra-chave no título e novidades desde a consulta anterior neste navegador.
+
+Títulos e trechos permanecem no idioma original. O botão de português abre o Google Tradutor em outra aba; tradução automática dentro do painel ainda não está conectada.
+
+## Rodar
 
 Requer Node.js 22.13 ou superior.
 
-```bash
+```sh
 npm install
 npm run dev
 ```
 
-Abra http://localhost:3000 e clique em **Buscar últimas notícias**.
+Produção: `npm run build` e `npm start`. O servidor escuta em 0.0.0.0, na porta 3000 ou PORT. GitHub Pages não executa a API deste aplicativo.
 
-Para produção:
+## Operação
 
-```bash
-npm install
-npm run build
-npm start
-```
+Consultas usam concorrência limitada, timeout por fonte, deduplicação de chamadas simultâneas e cache de até cinco minutos por instância. Falhas parciais ficam visíveis no painel; uma fonte indisponível não bloqueia as demais. Contagens por fonte são anteriores ao agrupamento e aos filtros.
 
-O servidor escuta em `0.0.0.0`, porta 3000 ou a porta definida na variável `PORT`.
+Somente páginas públicas são consultadas. Nenhuma credencial é necessária para as quatro fontes integradas. Não há contorno de login ou bloqueios. Mudanças no HTML e restrições da origem podem interromper a coleta. A cobertura não é completa, e os horários e as classificações por palavras-chave são aproximados.
 
-## Hospedagem
+A implantação é direta pela API da Vercel; o vínculo GitHub → Vercel ainda precisa ser configurado na conta para atualizações automáticas.
 
-Este projeto usa **Next.js com servidor Node.js**. Importe o repositório em uma hospedagem com suporte a Next.js/Node, utilizando os comandos acima. **GitHub Pages não executa `/api/news` e não atende este aplicativo sozinho.**
+## Validação
 
-Nenhuma chave de API é necessária para a primeira versão. Não há `.env` com credenciais no repositório. A privacidade do repositório não protege automaticamente um futuro site publicado: configure a proteção de acesso na hospedagem caso queira manter o aplicativo privado.
-
-## Fonte e limites
-
-O servidor consulta a primeira página das nove buscas públicas em https://search.daum.net/search?w=news&q=BTS&sort=recency e reutiliza os resultados por até cinco minutos, quando o processo permanece ativo. Não promete cobertura completa. Assuntos e relação com BTS são classificados por palavras-chave, não por verificação editorial.
-
-O Daum pode alterar seu HTML, limitar consultas ou recusar conexões da hospedagem. Não há contorno de bloqueios. Falhas são informadas e o aplicativo oferece o link da busca original. Os logs do servidor registram status HTTP ou falhas de leitura para diagnóstico.
-
-## Estado da verificação
-
-A extração foi conferida com HTML real e nove consultas retornaram 47 matérias em teste local em 5 de outubro de 2026. A publicação anterior em Cloudflare/Sites retornou HTTP 502 em `/api/news`; a causa externa não foi confirmada. Migrar para Node.js não garante, por si só, resolver esse acesso. Teste a coleta na hospedagem escolhida antes de considerar o aplicativo operacional.
+Em 5 de outubro de 2026, a primeira versão na Vercel retornou 48 matérias nas nove consultas do Daum. A expansão foi validada com HTML público real do Naver (10 resultados), TheQoo (20) e Pann (17), além da preservação de origens na deduplicação, TypeScript e build de produção. A validação local não garante a disponibilidade contínua das fontes externas.

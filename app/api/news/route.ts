@@ -1,35 +1,41 @@
 import { parseDaum, queries, type Article } from '@/lib/daum';
-export const runtime = 'nodejs';
-export const dynamic = 'force-dynamic';
-export const maxDuration = 60;
-
-let cache: {at:number; body:unknown}|null=null;
-let pending: Promise<unknown>|null=null;
-async function collect() {
- const started=Date.now(); const results: Article[]=[]; const failed:string[]=[];
- for(let i=0;i<queries.length;i+=3) {
-  await Promise.all(queries.slice(i,i+3).map(async q=>{
-   try {
-    const url='https://search.daum.net/search?'+new URLSearchParams({w:'news',q,sort:'recency',cluster:'y'});
-    const res=await fetch(url,{signal:AbortSignal.timeout(15000),headers:{'Accept':'text/html','Accept-Language':'ko,en;q=0.8'}});
-    if(!res.ok) { console.warn('Daum HTTP status', res.status, 'query', q); throw new Error('source'); }
-    const html=await res.text();
-    const articles=parseDaum(html);
-    if(!articles.length) { console.warn('Daum returned no parseable articles', q); failed.push(q);return; }
-    results.push(...articles);
-   }catch(e) { console.warn('Daum query failed', q, e instanceof Error ? e.name : 'Error'); failed.push(q); }
-  }));
+import { mergeArticles, parseNaver, parseTheQoo, parsePann, sourceCatalog } from '@/lib/sources';
+export const runtime='nodejs';
+export const dynamic='force-dynamic';
+export const maxDuration=60;
+let cache:{at:number;body:unknown}|null=null;
+let pending:Promise<unknown>|null=null;
+async function collect(){
+ const started=Date.now(),results:Article[]=[],failed:string[]=[];
+ const sources=sourceCatalog.map(s=>({...s}));
+ const jobs=queries.map(q=>({name:`Daum: ${q}`,source:0,url:'https://search.daum.net/search?'+new URLSearchParams({w:'news',q,sort:'recency',cluster:'y'}),parse:parseDaum}));
+ jobs.push(...['BTS','방탄소년단'].map(q=>({name:`Naver: ${q}`,source:1,url:'https://search.naver.com/search.naver?'+new URLSearchParams({where:'news',query:q,sort:'1'}),parse:parseNaver})));
+ jobs.push({name:'TheQoo',source:2,url:sources[2].url,parse:parseTheQoo},{name:'Pann',source:3,url:sources[3].url,parse:parsePann});
+ let next=0;
+ await Promise.all(Array.from({length:5},async()=>{
+  while(next<jobs.length){
+   const job=jobs[next++];
+   try{
+    const res=await fetch(job.url,{signal:AbortSignal.timeout(14000),headers:{Accept:'text/html','Accept-Language':'ko,en;q=0.8'}});
+    if(!res.ok)throw new Error(`HTTP ${res.status}`);
+    const items=job.parse(await res.text(),started);if(!items.length)throw new Error('Sem resultados legíveis');
+    sources[job.source].count+=items.length;results.push(...items);
+   }catch(e){failed.push(job.name);console.warn('Fonte indisponível:',job.name,e instanceof Error?e.message:'Falha');}
+  }
+ }));
+ for(let i=0;i<4;i++){
+  const own=jobs.filter(j=>j.source===i),failures=own.filter(j=>failed.includes(j.name));
+  sources[i].status=failures.length===own.length?'unavailable':failures.length?'partial':'ok';
+  if(failures.length)sources[i].detail=sources[i].count?'Algumas buscas não responderam. Resultados parciais.':'Não foi possível ler esta fonte agora. A pesquisa externa continua disponível.';
+  sources[i].count=new Set(results.filter(a=>i<2?a.platform===sources[i].platform:a.source.startsWith(sources[i].name)).map(a=>a.url)).size;
  }
- if(!results.length) throw new Error('O Daum não retornou resultados legíveis agora. Tente novamente em alguns minutos ou abra a busca original.');
- const seen=new Set<string>();
- const items=results.filter(a=>{const key=a.title.toLowerCase().replace(/\s+/g,'');if(seen.has(a.url)||seen.has(key))return false;seen.add(a.url);seen.add(key);return true;}).sort((a,b)=>(Date.parse(b.publishedAt||'')||0)-(Date.parse(a.publishedAt||'')||0));
- const body={items,checkedAt:new Date(started).toISOString(),queries:queries.length-failed.length,totalQueries:queries.length,failed,translation:'external',scope:'Primeira página dos resultados mais recentes de cada busca no Daum.'};
- cache={at:Date.now(),body};return body;
+ const body={items:mergeArticles(results),checkedAt:new Date(started).toISOString(),queries:jobs.length-failed.length,totalQueries:jobs.length,failed,sources,translation:'external'};
+ if(body.items.length)cache={at:Date.now(),body};return body;
 }
-export async function GET() {
- try {
-  if(cache&&Date.now()-cache.at<300000) return Response.json(cache.body);
-  if(!pending) pending=collect().finally(()=>{pending=null;});
+export async function GET(){
+ try{
+  if(cache&&Date.now()-cache.at<300000)return Response.json(cache.body,{headers:{'Cache-Control':'no-store'}});
+  if(!pending)pending=collect().finally(()=>{pending=null;});
   return Response.json(await pending,{headers:{'Cache-Control':'no-store'}});
- }catch(e){return Response.json({error:e instanceof Error?e.message:'Não foi possível consultar o Daum.'},{status:502});}
+ }catch{return Response.json({error:'Não foi possível consultar as fontes agora.'},{status:502});}
 }
