@@ -4,7 +4,7 @@ import { socialArticles, socialCheckedAt } from '@/lib/social-feed';
 import { translateArticles } from '@/lib/translation';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
-export const maxDuration=120;
+export const maxDuration=180;
 let cache:{at:number;body:unknown}|null=null;
 let pending:Promise<unknown>|null=null;
 async function collect(){
@@ -33,7 +33,7 @@ async function collect(){
  }
  const social=socialArticles();
  for(const source of sources.filter(s=>s.status==='curated'))source.count=social.filter(p=>p.platform===source.platform).length;
- const translated=await translateArticles(mergeArticles([...results,...social]),started+110000);
+ const translated=await translateArticles(mergeArticles([...results,...social]),started+170000);
  const body={socialCheckedAt,items:translated.items,checkedAt:new Date(started).toISOString(),queries:jobs.length-failed.length,totalQueries:jobs.length,failed,sources,translation:translated.translation};
  if(body.items.length)cache={at:Date.now(),body};return body;
 }
