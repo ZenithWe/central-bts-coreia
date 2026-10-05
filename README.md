@@ -10,13 +10,13 @@ Produção: https://central-bts-coreia.vercel.app/
 - Naver: primeira página de duas buscas públicas, BTS e 방탄소년단.
 - TheQoo: tópicos públicos da primeira página do fórum BTS.
 - Pann: tópicos públicos do FanTalk BTS. O fórum pode retornar posts antigos, ocultados pelo filtro padrão de sete dias.
-- Weibo e X: atalhos externos, **sem coleta automática**. O Weibo retornou uma tela de visitantes no teste; a API oficial do X requer acesso e créditos pagos. Nenhum serviço pago foi ativado.
+- Weibo e X: seleção de links públicos com resumos em português, atualizada pela tarefa diária “Atualizar radar BTS” do ChatGPT, pela manhã no horário de Brasília. Sem acesso direto às APIs das redes e sem monitoramento em tempo real. Nenhum serviço pago foi ativado.
 
 Cada resultado informa plataforma, veículo/comunidade e tipo (Notícia ou Comunidade). Resultados jornalísticos repetidos são agrupados preservando as origens. Tópicos de fórum não são tratados como notícias confirmadas. Não há conteúdo fictício.
 
 O filtro de plataforma atua sobre todas as origens da matéria agrupada. Filtros adicionais: integrante, período, assunto, termo, palavra-chave no título e novidades desde a consulta anterior neste navegador.
 
-Títulos e trechos permanecem no idioma original. O botão de português abre o Google Tradutor em outra aba; tradução automática dentro do painel ainda não está conectada.
+Títulos e trechos das quatro fontes ao vivo permanecem no idioma original. X e Weibo têm títulos e resumos em português. O botão de português abre o Google Tradutor em outra aba; tradução automática dentro do painel ainda não está conectada.
 
 ## Rodar
 
@@ -45,7 +45,7 @@ Em 5 de outubro de 2026, a primeira versão na Vercel retornou 48 matérias nas 
 
 `data/social-posts.json` contém posts públicos localizados por pesquisa, com resumos autorais em português, autor, plataforma, data de publicação quando confirmada, data de descoberta e nota de evidência. O feed combina esses dados com as quatro fontes já consultadas. Não há cadastro manual pelo usuário nem API paga.
 
-A pesquisa recorrente é executada por uma tarefa do ChatGPT, fora da Vercel. A tarefa atualiza o JSON no GitHub e publica uma nova implantação pela conexão Vercel; o site sozinho não pesquisa X/Weibo. O horário `checkedAt` mostra a última pesquisa concluída. Se a tarefa falhar, a seleção anterior permanece. O botão de notícias apenas lê a seleção publicada. Não há promessa de tempo real, cobertura completa ou gratuidade ilimitada fora das cotas existentes.
+A pesquisa diária é executada pela tarefa “Atualizar radar BTS” do ChatGPT, pela manhã no horário de Brasília, fora da Vercel. A tarefa atualiza o JSON no GitHub e publica uma nova implantação pela conexão Vercel; o site sozinho não pesquisa X/Weibo. O horário `checkedAt` mostra a última pesquisa concluída. Se a tarefa falhar, a seleção anterior permanece. O botão de notícias apenas lê a seleção publicada. Não há promessa de tempo real, cobertura completa ou gratuidade ilimitada fora das cotas existentes.
 
 Preservar datas originais, não confundir data de indexação com publicação, não inventar postagens/resumos. `publishedDate` aceita YYYY-MM-DD ou null (sem data confirmada). Posts sem data confirmada aparecem apenas em Todos os resultados. Para adicionar, usar URL direta HTTPS x.com/usuario/status/id ou weibo.com/usuario/id ou weibo.com/2/detail/id; `accountType` Oficial somente com evidência, senão Comunidade. Não coletar dados privados nem contornar bloqueios. Deduplicar por URL.
 
