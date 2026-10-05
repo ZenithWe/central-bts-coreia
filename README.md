@@ -16,7 +16,7 @@ Cada resultado informa plataforma, veículo/comunidade e tipo (Notícia ou Comun
 
 O filtro de plataforma atua sobre todas as origens da matéria agrupada. Filtros adicionais: integrante, período, assunto, termo, palavra-chave no título e novidades desde a consulta anterior neste navegador.
 
-Títulos e trechos das quatro fontes ao vivo permanecem no idioma original. X e Weibo têm títulos e resumos em português. O botão de português abre o Google Tradutor em outra aba; tradução automática dentro do painel ainda não está conectada.
+Títulos e trechos das quatro fontes ao vivo permanecem no idioma original. X e Weibo têm títulos e resumos em português. A integração Gemini traduz títulos e trechos dentro do painel quando GEMINI_API_KEY estiver configurada. Sem chave/cota, preserva os originais.
 
 ## Rodar
 
@@ -50,3 +50,11 @@ A pesquisa diária é executada pela tarefa “Atualizar radar BTS” do ChatGPT
 Preservar datas originais, não confundir data de indexação com publicação, não inventar postagens/resumos. `publishedDate` aceita YYYY-MM-DD ou null (sem data confirmada). Posts sem data confirmada aparecem apenas em Todos os resultados. Para adicionar, usar URL direta HTTPS x.com/usuario/status/id ou weibo.com/usuario/id ou weibo.com/2/detail/id; `accountType` Oficial somente com evidência, senão Comunidade. Não coletar dados privados nem contornar bloqueios. Deduplicar por URL.
 
 A seleção inicial inclui posts antigos, encontrados em 5/10/2026, que não aparecem no filtro inicial de sete dias. Use X ou Weibo e “Incluir posts antigos nos resultados”.
+
+## Tradução Gemini
+
+Configure GEMINI_API_KEY como variável sensível de Production na Vercel e publique novamente. Use uma chave de projeto Google AI Studio no Free Tier, com faturamento desativado; não ativar billing. GEMINI_MODEL é opcional e usa gemini-2.5-flash-lite por padrão. A chave nunca usa prefixo NEXT_PUBLIC e nunca é enviada ao navegador nem commitada. O site envia somente títulos/trechos públicos de suas próprias fontes, não textos arbitrários do visitante. No Free Tier, o provedor pode usar conteúdo para melhorar seus produtos.
+
+A tradução preserva URLs, fontes, datas e classificação. Português é o padrão, com controle Mostrar textos originais e identificação de tradução automática. Posts curatoriais já em português não são traduzidos novamente. Falhas, ausência de chave ou cota encerrada mantêm o conteúdo original com aviso. Não há fallback para modelo pago. Um projeto Gemini com billing ativo pode gerar cobranças: o aplicativo não consegue determinar sozinho a modalidade de faturamento da chave.
+
+Lotes de 20, no máximo duas chamadas simultâneas, timeout de 12 segundos, orçamento de tempo até 54 segundos desde a coleta, cooldown de 30 minutos após HTTP 429. Lotes válidos são reutilizados no Data Cache do Next por sete dias e em cache limitado por artigo por instância; alterações nos textos geram novas entradas. O cache pode ser descartado pela plataforma, então não garante consumo zero em repetições. O botão consulta a API com cache de cinco minutos.
