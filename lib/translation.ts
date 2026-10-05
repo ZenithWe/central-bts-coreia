@@ -26,7 +26,7 @@ export function validateTranslations(value:unknown,input:TextItem[]):Translated[
  });
 }
 
-const translateBatch=unstable_cache(async(input:TextItem[],model:string):Promise<Translated[]>=>{
+const translateBatch=unstable_cache(async(input:TextItem[],model:string,attempt:number):Promise<Translated[]>=>{
  if(Date.now()<cooldownUntil)throw new TranslationError('quota');
  const key=process.env.GEMINI_API_KEY;
  if(!key)throw new TranslationError('unavailable');
@@ -69,7 +69,7 @@ export async function translateArticles(input:Article[],deadline=Date.now()+1600
    if(quota||Date.now()+45500>deadline){failed=true;break;}
    const job=batches[next++],batch=job.items;
    try{
-    const output=await translateBatch(batch,model);
+    const output=await translateBatch(batch,model,job.attempt);
     for(const value of output){translated.set(value.id,value);const source=batch.find(a=>a.id===value.id)!;memory.set(fingerprint(source),{at:Date.now(),value});}
     const remaining=batch.filter(a=>!translated.has(a.id));
     if(remaining.length&&job.attempt===0)batches.push({items:remaining,attempt:1});
@@ -83,3 +83,4 @@ export async function translateArticles(input:Article[],deadline=Date.now()+1600
  const message=status==='complete'?`${count} publicações traduzidas para português.`:status==='quota'?'Limite temporário do Gemini atingido. Traduções disponíveis foram mantidas; os demais textos estão no idioma original.':failed?'Alguns textos não puderam ser traduzidos agora. Os originais continuam disponíveis.':'Tradução indisponível no momento. Exibindo os originais.';
  return {items,translation:{status,translated:count,total,message}};
 }
+
