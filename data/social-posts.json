@@ -1,7 +1,29 @@
 {
-  "checkedAt": "2026-10-05T21:52:55.680327+00:00",
+  "checkedAt": "2026-10-06T11:34:55Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/_sgminseven/status/2106235110622130410",
+      "author": "@_sgminseven",
+      "accountType": "Comunidade",
+      "title": "Fã destaca a equipe de segurança durante IDOL",
+      "summary": "O perfil yaz⁷ comentou a quantidade de seguranças que acompanhavam o BTS durante a caminhada da apresentação de IDOL e compartilhou um vídeo. É uma publicação de fã.",
+      "publishedDate": "2026-10-03",
+      "evidence": "Post incorporado pela Indiatimes, com texto, autoria e data explícita de 3/10/2026. Matéria de 4/10/2026: https://www.indiatimes.com/trending/did-bts-members-get-attacked-by-a-water-bottle-in-bogot-army-demand-hybe-protect-the-seven-stars-after-concert-incident/articleshow/134673408.html. Abertura direta do X retornou 403; resumo baseado somente na citação pública.",
+      "foundAt": "2026-10-06T11:34:55Z"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/naver_taehyung/status/2106660313059696812",
+      "author": "@naver_taehyung",
+      "accountType": "Comunidade",
+      "title": "Comunidade pede proteção a Taehyung e alerta contra objetos lançados",
+      "summary": "A comunidade Taehyung Naver pediu medidas de proteção ao artista e orientou fãs a não arremessarem objetos. O pedido acompanha um relato do perfil sobre um objeto lançado durante o show; não é um comunicado oficial.",
+      "publishedDate": "2026-10-04",
+      "evidence": "Post incorporado pela Indiatimes, com texto, autoria e data explícita de 4/10/2026: https://www.indiatimes.com/trending/did-bts-members-get-attacked-by-a-water-bottle-in-bogot-army-demand-hybe-protect-the-seven-stars-after-concert-incident/articleshow/134673408.html. Abertura direta do X retornou 403; o relato foi mantido atribuído à comunidade.",
+      "foundAt": "2026-10-06T11:34:55Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5346327122673918",
