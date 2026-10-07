@@ -1,7 +1,40 @@
 {
-  "checkedAt": "2026-10-06T11:34:55Z",
+  "checkedAt": "2026-10-07T11:25:52Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2106237110625939586",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS compartilha registro do show de 2 de outubro em Bogotá",
+      "summary": "O perfil oficial publicou uma atualização da série Today’s Bangtan sobre a apresentação de 2 de outubro em Bogotá, na etapa latino-americana da turnê ARIRANG.",
+      "publishedDate": "2026-10-03",
+      "evidence": "Trecho público indexado do post oficial identifica Today’s Bangtan e 261002, data do show. A republicação https://www.instagram.com/p/DeIhRajEXlP/ identifica explicitamente o tweet como 03/10/2026; https://theqoo.net/suga/4363828684 reproduz o link em 3/10. Abertura direta do X indisponível; não foi usada a data de indexação.",
+      "foundAt": "2026-10-07T11:25:52Z"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2106626842367308018",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS divulga registro do show de 3 de outubro em Bogotá",
+      "summary": "Na série Today’s Bangtan, o perfil oficial compartilhou uma atualização sobre a apresentação de 3 de outubro em Bogotá, parte da turnê ARIRANG.",
+      "publishedDate": null,
+      "evidence": "Trecho público indexado do post oficial identifica Today’s Bangtan e 261003. Link também reproduzido em https://theqoo.net/bts/4364786357, tópico de 4/10/2026. A data do show e a data do tópico não confirmam a data de publicação no X, mantida nula. Abertura direta do X indisponível.",
+      "foundAt": "2026-10-07T11:25:52Z"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2105613733569745337",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS compartilha vídeo dos bastidores da turnê ARIRANG na Europa",
+      "summary": "O perfil oficial divulgou o vídeo Europe Sketch, dedicado aos bastidores da etapa europeia da turnê ARIRANG, com um link para o BANGTANTV.",
+      "publishedDate": null,
+      "evidence": "Resultado público indexado do post oficial mostra o título BTS WORLD TOUR 'ARIRANG' IN EUROPE Sketch e o link youtu.be/qhB30FChG18. Abertura direta retornou 403. Data original da postagem no X não confirmada; não foi usada a data de indexação.",
+      "foundAt": "2026-10-07T11:25:52Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/_sgminseven/status/2106235110622130410",
