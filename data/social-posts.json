@@ -1,7 +1,29 @@
 {
-  "checkedAt": "2026-10-07T11:25:52Z",
+  "checkedAt": "2026-10-08T11:21:17.143Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5351494208980202",
+      "author": "闵玧其SUGA_CatCafe",
+      "accountType": "Comunidade",
+      "title": "Comunidade compartilha trecho de SUGA em BTS in Toronto EP.1",
+      "summary": "A comunidade dedicada a SUGA compartilhou um vídeo relacionado ao primeiro episódio de BTS in Toronto. A publicação é de fã e atribui o conteúdo ao BANGTANTV.",
+      "publishedDate": "2026-10-08",
+      "evidence": "Resultado público indexado consultado em 8/10/2026 exibiu a URL direta, autoria 闵玧其SUGA_CatCafe, publicação recente no mesmo dia e o texto “261006 BANGTANTV更新SUGA相关 ... BTS in Toronto EP.1”. Tratado como conteúdo de comunidade, não como comunicado oficial.",
+      "foundAt": "2026-10-08T11:21:17.143Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5350719511333378",
+      "author": "BTS_official",
+      "accountType": "Oficial",
+      "title": "BTS publica vlog de RM nas Cataratas do Niágara",
+      "summary": "O perfil oficial compartilhou o vlog de RM em uma viagem às Cataratas do Niágara, com cenas de trajeto e visita ao local.",
+      "publishedDate": "2026-10-05",
+      "evidence": "Post direto aberto pela busca pública: autoria BTS_official, horário 10-5 18:00 e texto “TRIP TO NIAGARA FALLS l RM's VLOG”. A página pública da Sina confirma a conta verificada, a data 5/10/2026 e o mesmo conteúdo.",
+      "foundAt": "2026-10-08T11:21:17.143Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/bts_bighit/status/2106237110625939586",
