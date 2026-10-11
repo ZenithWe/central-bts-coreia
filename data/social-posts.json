@@ -1,7 +1,18 @@
 {
-  "checkedAt": "2026-10-08T11:21:17.143Z",
+  "checkedAt": "2026-10-11T11:39:40.105Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5351113681538149",
+      "author": "派对企划册VIP3",
+      "accountType": "Comunidade",
+      "title": "Comunidade traduz prévia de BTS in Toronto EP.2",
+      "summary": "O perfil compartilhou uma versão legendada da prévia do segundo episódio de BTS in Toronto, destacando a brincadeira entre SUGA e Jung Kook sobre o termo “ballboy”. É conteúdo de comunidade.",
+      "publishedDate": null,
+      "evidence": "Resultado público indexado consultado em 11/10/2026 exibiu a URL direta, autoria 派对企划册VIP3 e o texto da prévia; o trecho mostrava “6 horas atrás”, sem data absoluta confirmada. Tratado como conteúdo de comunidade.",
+      "foundAt": "2026-10-11T11:39:40.105Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5351494208980202",
