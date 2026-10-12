@@ -1,7 +1,29 @@
 {
-  "checkedAt": "2026-10-11T11:39:40.105Z",
+  "checkedAt": "2026-10-12T11:12:06.491Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5352909118376873",
+      "author": "BTS_official",
+      "accountType": "Oficial",
+      "title": "BTS publica episódio 2 em Toronto com torneio de pickleball",
+      "summary": "O perfil oficial compartilhou o segundo episódio de BTS in Toronto, centrado no primeiro torneio de pickleball do grupo.",
+      "publishedDate": "2026-10-12",
+      "evidence": "Resultado público indexado consultado em 12/10/2026 exibiu a URL direta, autoria BTS_official e o horário relativo “17 minutos atrás”, além do título “Primeiro torneio de pickleball | BTS in Toronto EP.2”. A página direta não foi aberta por restrição de robots.",
+      "foundAt": "2026-10-12T11:12:06.491Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5353208939808620",
+      "author": "闵玧其SUGA_CatCafe",
+      "accountType": "Comunidade",
+      "title": "Comunidade compartilha episódio 2 de Toronto com foco em SUGA",
+      "summary": "A comunidade dedicada a SUGA compartilhou o vídeo de BTS in Toronto EP.2 atribuído ao BANGTANTV. É conteúdo de fã, não um comunicado oficial.",
+      "publishedDate": "2026-10-12",
+      "evidence": "Resultado público indexado consultado em 12/10/2026 exibiu a URL direta, autoria 闵玧其SUGA_CatCafe, publicação “2 horas atrás” e o texto “261011 BANGTANTV atualizou conteúdo relacionado a SUGA — BTS in Toronto EP.2”. Tratado como comunidade.",
+      "foundAt": "2026-10-12T11:12:06.491Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5351113681538149",
