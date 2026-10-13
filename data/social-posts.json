@@ -1,7 +1,29 @@
 {
-  "checkedAt": "2026-10-12T11:12:06.491Z",
+  "checkedAt": "2026-10-13T11:17:20.843Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2109132942698266678",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS compartilha registro do show de 10 de outubro em Lima",
+      "summary": "O perfil oficial publicou uma atualização da série Today’s Bangtan sobre a apresentação de 10 de outubro em Lima, parte da turnê mundial ARIRANG.",
+      "publishedDate": "2026-10-11",
+      "evidence": "Resultado público indexado consultado em 13/10/2026 exibiu a URL direta, autoria @bts_bighit e o texto “[#오늘의방탄] 261010 BTS WORLD TOUR 'ARIRANG' IN LIMA”. O identificador Snowflake do X corresponde a 11/10/2026 04:04:13 UTC; a abertura direta retornou 403.",
+      "foundAt": "2026-10-13T11:17:20.843Z"
+    },
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2108781965331820645",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS publica registro do show de 9 de outubro em Lima",
+      "summary": "Na série Today’s Bangtan, o perfil oficial compartilhou uma atualização da apresentação de 9 de outubro em Lima, na etapa latino-americana da turnê ARIRANG.",
+      "publishedDate": "2026-10-10",
+      "evidence": "Resultado público indexado consultado em 13/10/2026 exibiu a URL direta, autoria @bts_bighit e o texto “[#오늘의방탄] 261009 BTS WORLD TOUR 'ARIRANG' IN LIMA”. O identificador Snowflake do X corresponde a 10/10/2026 04:49:34 UTC; a abertura direta retornou 403.",
+      "foundAt": "2026-10-13T11:17:20.843Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5352909118376873",
