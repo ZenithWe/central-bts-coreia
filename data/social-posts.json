@@ -1,7 +1,29 @@
 {
-  "checkedAt": "2026-10-13T11:17:20.843Z",
+  "checkedAt": "2026-10-14T11:21:33.562Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5353903908716600",
+      "author": "金硕珍RUNJIN_EP1204",
+      "accountType": "Comunidade",
+      "title": "Comunidade compartilha nova foto de Jin atribuída ao BTS_official",
+      "summary": "A comunidade dedicada a Jin compartilhou uma imagem que atribuiu a uma atualização do BTS_official. O conteúdo permanece identificado como publicação de fã.",
+      "publishedDate": "2026-10-14",
+      "evidence": "Resultado público indexado consultado em 14/10/2026 exibiu a URL direta, autoria 金硕珍RUNJIN_EP1204, publicação no mesmo dia e o texto “261014 BTS_official ... atualização relacionada a JIN, 1 foto”. A página direta não foi aberta por restrição de robots; classificado como comunidade.",
+      "foundAt": "2026-10-14T11:21:33.562Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5353637334746147",
+      "author": "WNS_WeNeedBTS",
+      "accountType": "Comunidade",
+      "title": "Comunidade repercute atualização de V sobre o Peru",
+      "summary": "O perfil WNS_WeNeedBTS compartilhou uma atualização atribuída à conta de V com a frase em espanhol “¡PERÚ ES CLAVE!”. É conteúdo de comunidade.",
+      "publishedDate": "2026-10-14",
+      "evidence": "Resultado público indexado consultado em 14/10/2026 exibiu a URL direta, autoria WNS_WeNeedBTS, publicação recente no mesmo dia e o texto “261013 ... conta de Kim Taehyung atualizada: ¡PERÚ ES CLAVE!”. A data 261013 foi tratada como referência à atualização reproduzida, não como data do post no Weibo.",
+      "foundAt": "2026-10-14T11:21:33.562Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/bts_bighit/status/2109132942698266678",
