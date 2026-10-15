@@ -1,7 +1,18 @@
 {
-  "checkedAt": "2026-10-14T11:21:33.562Z",
+  "checkedAt": "2026-10-15T11:08:46.797Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5352766961615657",
+      "author": "现场季LiveSeason VIP7",
+      "accountType": "Comunidade",
+      "title": "Perfil relata homenagem de Lima ao BTS durante a turnê",
+      "summary": "Segundo o perfil 现场季LiveSeason, a cidade de Lima renomeou temporariamente uma rua como “Avenida BTS” entre 5 e 11 de outubro para receber os shows do grupo. É uma publicação de comunidade.",
+      "publishedDate": null,
+      "evidence": "Resultado público indexado consultado em 15/10/2026 exibiu a URL direta, autoria 现场季LiveSeason VIP7 e o relato sobre a homenagem em Lima. O trecho mostrava apenas horário relativo de publicação, sem data absoluta confirmada; a data foi mantida nula e o conteúdo atribuído à comunidade.",
+      "foundAt": "2026-10-15T11:08:46.797Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5353903908716600",
