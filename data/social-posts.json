@@ -1,7 +1,18 @@
 {
-  "checkedAt": "2026-10-16T11:54:38.247Z",
+  "checkedAt": "2026-10-17T11:56:34.125Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5354297073076438",
+      "author": "一只泉鸟酱VIP8",
+      "accountType": "Comunidade",
+      "title": "Comunidade destaca Jimin no primeiro show de Santiago",
+      "summary": "O perfil 一只泉鸟酱 compartilhou um vídeo de Jimin durante o primeiro show da turnê do BTS em Santiago, realizado em 15 de outubro. É conteúdo de comunidade.",
+      "publishedDate": "2026-10-15",
+      "evidence": "Resultado público indexado consultado em 17/10/2026 exibiu a URL direta, autoria 一只泉鸟酱VIP8, data relativa compatível e o texto “261015 BTS巡演 圣地亚哥 D1” com foco em Jimin. A página direta não foi aberta por restrição de robots; classificado como comunidade.",
+      "foundAt": "2026-10-17T11:56:34.125Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5352766961615657",
