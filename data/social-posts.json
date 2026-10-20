@@ -1,7 +1,40 @@
 {
-  "checkedAt": "2026-10-19T11:15:15.268Z",
+  "checkedAt": "2026-10-20T11:48:32.523Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/igin_sns/status/2112348080141955339",
+      "author": "@igin_sns",
+      "accountType": "Comunidade",
+      "title": "IGIN divulga campanha com Jin",
+      "summary": "A marca IGIN publicou uma peça promocional com Jin para sua bebida sem álcool de maçã e pêssego. É uma publicação de terceiro, não um comunicado oficial do BTS.",
+      "publishedDate": "2026-10-20",
+      "evidence": "A republicação pública https://www.ptkorea.com/672306/ reproduz a mensagem “Get refreshed with IGIN NON-ALCOHOLIC APPLE PEACH”, identifica a autoria e fornece a URL direta. O identificador Snowflake do X corresponde a 20/10/2026 01:00:02 UTC; a abertura direta ficou indisponível.",
+      "foundAt": "2026-10-20T11:48:32.523Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5356101496996751",
+      "author": "WNS_WeNeedBTS VIP2",
+      "accountType": "Comunidade",
+      "title": "Comunidade reúne nova atualização de RM",
+      "summary": "O perfil WNS_WeNeedBTS compartilhou um conjunto de imagens atribuído a uma atualização recente da conta de RM. É uma republicação de comunidade no Weibo.",
+      "publishedDate": "2026-10-20",
+      "evidence": "Resultado público indexado consultado em 20/10/2026 exibiu a URL direta, a autoria WNS_WeNeedBTS VIP2, o marcador “14分钟前” e o texto “261020 小相机 金南俊账号更新”. A página direta não pôde ser aberta.",
+      "foundAt": "2026-10-20T11:48:32.523Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5356048139421233",
+      "author": "猫系闵玧其 VIP9",
+      "accountType": "Comunidade",
+      "title": "Comunidade compartilha fotos de SUGA em Santiago",
+      "summary": "O perfil 猫系闵玧其 compartilhou imagens atribuídas à atualização do Instagram de SUGA com a legenda “SANTIAGO”. É uma republicação de comunidade no Weibo.",
+      "publishedDate": "2026-10-20",
+      "evidence": "Resultado público indexado consultado em 20/10/2026 exibiu a URL direta, a autoria 猫系闵玧其 VIP9, o marcador “18分钟前” e o texto “261020 玧其ins更新 agustd SANTIAGO”. A página direta não pôde ser aberta.",
+      "foundAt": "2026-10-20T11:48:32.523Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/bts_bighit/status/2111650559891763485",
