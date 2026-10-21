@@ -1,7 +1,18 @@
 {
-  "checkedAt": "2026-10-20T11:48:32.523Z",
+  "checkedAt": "2026-10-21T11:06:09.624Z",
   "method": "Pesquisa pública com curadoria e resumos em português",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/BIGHIT_MUSIC/status/2112706686368776200",
+      "author": "@BIGHIT_MUSIC",
+      "accountType": "Oficial",
+      "title": "BIGHIT destaca permanência de ARIRANG na Billboard 200",
+      "summary": "A BIGHIT MUSIC compartilhou uma matéria que aponta o álbum ARIRANG entre os 45 primeiros da Billboard 200 por 30 semanas consecutivas.",
+      "publishedDate": "2026-10-21",
+      "evidence": "Resultado público indexado consultado em 21/10/2026 exibiu a URL direta, autoria @BIGHIT_MUSIC, data de 21/10/2026 e o trecho sobre ARIRANG permanecer no top 45 da Billboard 200 por 30 semanas. O identificador Snowflake corresponde a 21/10/2026 00:45:00 UTC; a abertura direta retornou 403.",
+      "foundAt": "2026-10-21T11:06:09.624Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/igin_sns/status/2112348080141955339",
