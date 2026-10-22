@@ -1,7 +1,17 @@
 {
-  "checkedAt": "2026-10-21T11:06:09.624Z",
-  "method": "Pesquisa pública com curadoria e resumos em português",
+  "checkedAt": "2026-10-22T11:14:58.826Z",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/hybe_merch/status/2112884102839828570",
+      "author": "@HYBE_MERCH",
+      "accountType": "Oficial",
+      "title": "HYBE Merch apresenta carimbo da turnê para Buenos Aires",
+      "summary": "A HYBE Merch divulgou o item “Stamp Your Journey” da turnê ARIRANG dedicado à parada de Buenos Aires, na etapa latino-americana.",
+      "publishedDate": "2026-10-21",
+      "evidence": "A URL direta do post foi obtida em uma republicação pública no r/bangtan e o texto/autoria foram confirmados por resultados públicos indexados da HYBE MERCH. O identificador Snowflake corresponde a 21/10/2026 12:30:00 UTC; a abertura direta no X retornou 403.",
+      "foundAt": "2026-10-22T11:14:58.826Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/BIGHIT_MUSIC/status/2112706686368776200",
