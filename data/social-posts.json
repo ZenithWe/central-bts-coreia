@@ -1,6 +1,28 @@
 {
-  "checkedAt": "2026-10-22T11:14:58.826Z",
+  "checkedAt": "2026-10-23T11:53:48.872Z",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2113093126344822898",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS compartilha registro do primeiro show em Buenos Aires",
+      "summary": "O perfil oficial publicou uma atualização da série Today’s Bangtan sobre a apresentação de 21 de outubro da turnê ARIRANG em Buenos Aires.",
+      "publishedDate": "2026-10-22",
+      "evidence": "Resultado público indexado do X confirmou a URL direta, a autoria @bts_bighit e o texto “261021 BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES”. O identificador Snowflake corresponde a 22/10/2026 02:20:35 UTC; a abertura direta retornou 403.",
+      "foundAt": "2026-10-23T11:53:48.872Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5356993972798772",
+      "author": "WNS_WeNeedBTS VIP2",
+      "accountType": "Comunidade",
+      "title": "Comunidade destaca obras escolhidas por RM para exposição no SFMOMA",
+      "summary": "O perfil WNS_WeNeedBTS reproduziu uma atualização do SFMOMA sobre “RM x SFMOMA: Between You and Me”, com obras da coleção pessoal de RM e do museu.",
+      "publishedDate": "2026-10-23",
+      "evidence": "A página pública do post foi aberta em 23/10/2026 e exibiu a autoria WNS_WeNeedBTS VIP2, marca temporal de 6 horas e o texto sobre a exposição de RM no SFMOMA. Trata-se de republicação de comunidade.",
+      "foundAt": "2026-10-23T11:53:48.872Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/hybe_merch/status/2112884102839828570",
