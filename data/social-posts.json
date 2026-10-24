@@ -1,6 +1,17 @@
 {
-  "checkedAt": "2026-10-23T11:53:48.872Z",
+  "checkedAt": "2026-10-24T11:48:33.130Z",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2113814274384818643",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS compartilha registro do segundo show em Buenos Aires",
+      "summary": "O perfil oficial publicou uma atualização da série Today’s Bangtan sobre a apresentação de 23 de outubro da turnê ARIRANG em Buenos Aires.",
+      "publishedDate": "2026-10-24",
+      "evidence": "Resultado público indexado do X confirmou a URL direta, a autoria @bts_bighit e o texto “261023 BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES”; duas comunidades públicas reproduziram a mesma publicação. O identificador Snowflake corresponde a 24/10/2026 02:06:10 UTC; a abertura direta retornou 403.",
+      "foundAt": "2026-10-24T11:48:33.130Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/bts_bighit/status/2113093126344822898",
