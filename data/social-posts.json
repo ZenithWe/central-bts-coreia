@@ -1,6 +1,28 @@
 {
-  "checkedAt": "2026-10-24T11:48:33.130Z",
+  "checkedAt": "2026-10-25T11:47:16.384Z",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2114179375633760423",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS compartilha registro do terceiro show em Buenos Aires",
+      "summary": "O perfil oficial publicou uma atualização da série Today’s Bangtan sobre a apresentação de 24 de outubro da turnê ARIRANG em Buenos Aires.",
+      "publishedDate": "2026-10-25",
+      "evidence": "Resultado público indexado do X confirmou a URL direta, a autoria @bts_bighit e o texto “261024 BTS WORLD TOUR 'ARIRANG' IN BUENOS AIRES”; duas comunidades públicas reproduziram a mesma publicação. O identificador Snowflake corresponde a 25/10/2026 02:16:57 UTC; a abertura direta retornou 403.",
+      "foundAt": "2026-10-25T11:47:16.384Z"
+    },
+    {
+      "platform": "Weibo",
+      "url": "https://weibo.com/2/detail/5357756954706748",
+      "author": "WNS_WeNeedBTS VIP2",
+      "accountType": "Comunidade",
+      "title": "Comunidade reproduz atualização de Jungkook como fotógrafo",
+      "summary": "O perfil WNS_WeNeedBTS compartilhou uma atualização atribuída à conta de Jungkook, dizendo que ele praticava fotografia com seu “modelo favorito”; V respondeu chamando-o de “Fotógrafo Jeon”.",
+      "publishedDate": "2026-10-25",
+      "evidence": "A página pública do post foi aberta em 25/10/2026 e exibiu a autoria WNS_WeNeedBTS VIP2, marca temporal de 16 horas e o texto identificado como atualização de Jungkook, com comentário atribuído a V. Trata-se de republicação de comunidade.",
+      "foundAt": "2026-10-25T11:47:16.384Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/bts_bighit/status/2113814274384818643",
