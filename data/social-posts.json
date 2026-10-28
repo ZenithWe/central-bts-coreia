@@ -1,6 +1,17 @@
 {
-  "checkedAt": "2026-10-27T11:24:30.115Z",
+  "checkedAt": "2026-10-28T11:09:49.598Z",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/BTS_twt/status/2115103672069919222",
+      "author": "@BTS_twt",
+      "accountType": "Oficial",
+      "title": "V compartilha fotos e deixa recado para os fãs",
+      "summary": "V publicou novas fotos pelo perfil compartilhado do BTS e pediu que todos tomassem cuidado para não pegar um resfriado.",
+      "publishedDate": "2026-10-27",
+      "evidence": "O link direto foi confirmado em uma publicação pública do r/bangtan e em resultados públicos indexados que exibem a autoria @BTS_twt, o texto coreano “다들 감기 조심해” e a atribuição a V. O identificador Snowflake corresponde a 27/10/2026 15:29:46 UTC; a abertura direta do X retornou 403.",
+      "foundAt": "2026-10-28T11:09:49.598Z"
+    },
     {
       "platform": "Weibo",
       "url": "https://weibo.com/2/detail/5357833403237134",
