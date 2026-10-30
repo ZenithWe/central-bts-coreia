@@ -1,6 +1,17 @@
 {
-  "checkedAt": "2026-10-29T11:40:58.985Z",
+  "checkedAt": "2026-10-30T11:46:12.341Z",
   "posts": [
+    {
+      "platform": "X",
+      "url": "https://x.com/bts_bighit/status/2115428378136211646",
+      "author": "@bts_bighit",
+      "accountType": "Oficial",
+      "title": "BTS reforça transmissão do show de São Paulo nos cinemas",
+      "summary": "O perfil oficial lembrou que a apresentação de 30 de outubro em São Paulo seria transmitida para cinemas de vários países, marcando o encerramento da etapa latino-americana da turnê ARIRANG.",
+      "publishedDate": "2026-10-28",
+      "evidence": "Uma matéria pública de 28/10/2026 incorporou a URL direta e reproduziu o texto completo de @bts_bighit sobre a transmissão do show de São Paulo em 30/10. O identificador Snowflake corresponde a 28/10/2026 13:00:02 UTC; a data do evento foi mantida separada da publicação.",
+      "foundAt": "2026-10-30T11:46:12.341Z"
+    },
     {
       "platform": "X",
       "url": "https://x.com/bts_bighit/status/2115635075455013266",
